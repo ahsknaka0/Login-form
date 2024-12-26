@@ -1,0 +1,118 @@
+:root {
+	--swiper-theme-color: #013d54; /* Set global Swiper theme color */
+}
+
+#app {
+	height: 100%;
+}
+
+html,
+body {
+	position: relative;
+	height: 100%;
+}
+
+body {
+	background: #eee;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: auto; /* Maintain aspect ratio */
+	object-fit: cover;
+}
+
+.autoplay-progress {
+	position: absolute;
+	right: 16px;
+	bottom: 16px;
+	z-index: 10;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	color: #013d54; /* Autoplay text color */
+}
+
+.autoplay-progress svg {
+	--progress: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	stroke-width: 4px;
+	stroke: #013d54; /* Autoplay progress stroke color */
+	fill: none;
+	stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+	stroke-dasharray: 125.6;
+	transform: rotate(-90deg);
+}
+
+/* Media queries for responsiveness */
+
+/* Small screens (up to 600px) */
+@media (max-width: 600px) {
+	.swiper-slide {
+		font-size: 14px; /* Reduce font size */
+	}
+
+	.autoplay-progress {
+		width: 36px; /* Adjust progress size */
+		height: 36px;
+		right: 8px;
+		bottom: 8px;
+	}
+}
+
+/* Medium screens (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+	.swiper-slide {
+		font-size: 16px; /* Slightly smaller font size */
+	}
+
+	.autoplay-progress {
+		width: 40px; /* Adjust progress size */
+		height: 40px;
+		right: 12px;
+		bottom: 12px;
+	}
+}
+
+/* Large screens (above 1024px) */
+@media (min-width: 1025px) {
+	.swiper {
+		width: 80%; /* Center the swiper content */
+		margin: 0 auto;
+	}
+
+	.autoplay-progress {
+		width: 48px;
+		height: 48px;
+	}
+}

@@ -1,0 +1,244 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        /* CSS */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #F7FBEA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            max-width: 1200px;
+            height: 600px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .login-section {
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #013D54;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #555;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #76B900;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+        }
+
+        .remember-me label {
+            margin-left: 5px;
+            font-size: 1rem;
+            color: #76B900;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background: #76B900;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background: #013D54;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .forgot-password a {
+            color: #76B900;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .carousel-section {
+    flex: 1;
+    background: #F0F8FF;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    border-left: 4px solid #013D54;
+    text-align: center; 
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+
+        .swiper-slide h2 {
+            font-size: 1.8rem;
+            color: #013D54;
+            margin-bottom: 10px;
+        }
+
+        .swiper-slide p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        @media screen and (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+
+            .carousel-section {
+                display: flex;
+                border-left: 4px solid #013D54;
+            }
+
+            .login-section {
+                width: 40%;
+            }
+
+            .carousel-section {
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Login Section -->
+        <div class="login-section">
+            <h2 class="login-title">SIM Login</h2>
+            <form>
+                <label for="userId">
+                    <i class="fas fa-user"></i>
+                    <span>User Id</span>
+                </label>
+                <input type="text" id="userId" placeholder="Enter your User ID">
+
+                <label for="password">
+                    <i class="fas fa-lock"></i>
+                    <span>Password</span>
+                </label>
+                <div style="position: relative;">
+                    <input type="password" id="password" placeholder="Enter your Password">
+                    <button type="button" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: none; border: none; cursor: pointer;">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Remember Me</label>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+
+                <div class="forgot-password">
+                    <a href="/forgot-password">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Carousel Section -->
+        <div class="carousel-section">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h2>SIM</h2>
+                        <p>Completely integrated application to help you run your entire Educational<br>Setup more efficiently</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h2>End-to-End Business Process Management</h2>
+                        <p>Till now either you were not using any application or were forced to buy<br>multiple applications to manage your institutional activities.</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h2>Create Your Web Presence Easily</h2>
+                        <p>Customization services along with SIM allows you to have your<br>interactive Website without hassles – with any URL you choose.</p>
+                    </div>
+					<div class="swiper-slide">
+                        <h2>Analyze and Make Better Decisions</h2>
+                        <p>Good reporting is crucial to your institutional setup. You need<br>accurate and fast information to make smart decisions.</p>
+                    </div>
+					<div class="swiper-slide">
+                        <h2>Advanced Security Features</h2>
+                        <p>Three – Tier Security System - A system so unique and flexible<br>that you manage all your users and machines with specific user rights.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+</html>
